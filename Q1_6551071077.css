@@ -1,0 +1,26 @@
+ header{
+  background: yellow;
+}
+
+ aside.trai{
+   float: left;
+   width: 200px;
+   padding: 16px;
+   top:10px;
+ }
+ aside.phai{
+   float: right;
+   width: 200px;
+   padding: 16px;
+   top:10px;
+ }
+ .main{
+   margin-right:200px;
+   margin-left: 200px;
+   padding: 16px;
+ }
+.layout::after {
+  content: "";
+  display: block;
+  clear: both;
+}
