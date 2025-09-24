@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Biểu mẫu thông tin người dùng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .radio-group, .checkbox-group {
+      margin-top: 5px;
+    }
+    .radio-group label,
+    .checkbox-group label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="submit.html" method="get">
+    <h2>Biểu mẫu thông tin người dùng</h2>
+
+    <label for="name">Họ tên:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label>Tuổi:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="age" value="<18" required> &lt;18</label>
+      <label><input type="radio" name="age" value="19-35"> 19–35</label>
+      <label><input type="radio" name="age" value="36-48"> 36–48</label>
+      <label><input type="radio" name="age" value=">49"> &gt;49</label>
+    </div>
+
+    <label for="profession">Nghề nghiệp:</label>
+    <input type="text" id="profession" name="profession" required>
+
+    <label for="country">Quốc gia:</label>
+    <select id="country" name="country" required>
+      <option value="">--Chọn quốc gia--</option>
+      <option value="Vietnam">Việt Nam</option>
+      <option value="USA">Hoa Kỳ</option>
+      <option value="Japan">Nhật Bản</option>
+      <option value="France">Pháp</option>
+    </select>
+
+    <label>Sở thích:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="interests" value="Đọc sách"> Đọc sách</label>
+      <label><input type="checkbox" name="interests" value="Du lịch"> Du lịch</label>
+      <label><input type="checkbox" name="interests" value="Âm nhạc"> Âm nhạc</label>
+      <label><input type="checkbox" name="interests" value="Thể thao"> Thể thao</label>
+    </div>
+
+    <label for="referral">Bạn biết đến trang web bằng cách nào?</label>
+    <textarea id="referral" name="referral" rows="4" required></textarea>
+
+    <button type="submit">Gửi thông tin</button>
+  </form>
+
+</body>
+</html>
